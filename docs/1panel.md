@@ -8,7 +8,7 @@
 
 ```bash
 cd /opt
-git clone https://github.com/Zhanfg/yuezhou-pop-infra.git
+git clone https://github.com/ZhanfgBuild/yuezhou-pop-infra.git
 cd yuezhou-pop-infra
 sudo bash stack.sh install
 ```

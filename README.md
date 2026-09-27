@@ -28,7 +28,7 @@ A reusable, project-agnostic data-service stack for a VPS running 1Panel or plai
 ## 快速开始
 
 ```bash
-git clone https://github.com/Zhanfg/yuezhou-pop-infra.git
+git clone https://github.com/ZhanfgBuild/yuezhou-pop-infra.git
 cd yuezhou-pop-infra
 sudo bash stack.sh install
 ```
