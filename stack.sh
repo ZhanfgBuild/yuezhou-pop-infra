@@ -79,10 +79,12 @@ ensure_env() {
   fi
 
   chmod 600 "$ENV_FILE"
-  grep -q '^POSTGRES_PASSWORD=GENERATED_ON_INSTALL$' "$ENV_FILE" && \
+  if grep -q '^POSTGRES_PASSWORD=GENERATED_ON_INSTALL$' "$ENV_FILE"; then
     replace_env_value POSTGRES_PASSWORD "$(generate_secret)"
-  grep -q '^VALKEY_PASSWORD=GENERATED_ON_INSTALL$' "$ENV_FILE" && \
+  fi
+  if grep -q '^VALKEY_PASSWORD=GENERATED_ON_INSTALL$' "$ENV_FILE"; then
     replace_env_value VALKEY_PASSWORD "$(generate_secret)"
+  fi
 }
 
 load_env() {
